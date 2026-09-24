@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Named "green_*" for historical reasons in the code, but these now hold
+         the app's teal palette - renaming every reference across the project
+         was judged riskier than just changing the values here. -->
+    <color name="green_primary">#00796B</color>
+    <color name="green_dark">#004D40</color>
+    <color name="green_light">#E0F2F1</color>
+    <color name="amber">#F9A825</color>
+    <color name="amber_light">#FFF8E1</color>
+    <color name="red">#C62828</color>
+    <color name="red_light">#FFEBEE</color>
+    <color name="grey_light">#EEEEEE</color>
+    <color name="grey_text">#616161</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#FAFAFA</color>
+    <color name="ic_launcher_background">#0A4940</color>
+</resources>
