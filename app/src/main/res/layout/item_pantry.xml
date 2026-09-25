@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One row of the pantry RecyclerView. An emoji icon (chosen from the
+     ingredient name) sits in a circular badge on the left; tapping the row
+     edits the item, tapping the bin icon deletes it. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/text_item_icon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_icon_badge"
+        android:gravity="center"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="🍅" />
+
+    <TextView
+        android:id="@+id/text_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/text_item_icon"
+        app:layout_constraintStart_toEndOf="@id/text_item_icon"
+        app:layout_constraintEnd_toStartOf="@id/button_delete"
+        tools:text="Tomatoes" />
+
+    <TextView
+        android:id="@+id/text_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/grey_text"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_item_name"
+        app:layout_constraintStart_toStartOf="@id/text_item_name"
+        tools:text="3 piece" />
+
+    <TextView
+        android:id="@+id/text_item_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/text_item_quantity"
+        app:layout_constraintStart_toStartOf="@id/text_item_name"
+        tools:text="Expires in 2 day(s)" />
+
+    <ImageButton
+        android:id="@+id/button_delete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/action_delete_item"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
