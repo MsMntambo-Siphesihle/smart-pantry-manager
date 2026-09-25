@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_header_alerts" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_expiry_alerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_expiry_alerts"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_expiry_alerts_sub"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_almost_there"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_almost_there"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_almost_there_sub"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp" />
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_header_units" />
+
+        <RadioGroup
+            android:id="@+id/group_units"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_metric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_units_metric" />
+
+            <RadioButton
+                android:id="@+id/radio_imperial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_units_imperial" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_header_about" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_about_body"
+            android:textColor="@color/grey_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_db_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_status_neutral"
+            android:padding="12dp"
+            android:textColor="@color/grey_text"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
