@@ -29,12 +29,10 @@ public class Recipe {
     public String getCategory() { return category; }
     public String getSteps() { return steps; }
 
-    /** Falls back to a generic pot-of-food emoji if no icon was seeded. */
-    public String getIcon() {
-        return (icon == null || icon.isEmpty())
-                ? com.richfield.smartpantry.util.IngredientIcons.DEFAULT_ICON
-                : icon;
+       public String getIcon() {
+        return com.richfield.smartpantry.util.RecipeIcons.getIcon(name);
     }
+
 
     public List<RecipeIngredient> getIngredients() { return ingredients; }
     public void addIngredient(RecipeIngredient ingredient) { ingredients.add(ingredient); }
